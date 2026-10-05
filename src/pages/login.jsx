@@ -184,15 +184,21 @@ function LoginPage() {
               </button>
             </form>
 
-            <div className="mt-4 text-center">
-              <button
+            <div className="mt-6 p-4 bg-emerald-50 rounded-lg border border-emerald-100">
+              <p className="text-sm font-medium text-emerald-800 text-center mb-2">Credenciales de Demo (Administrador)</p>
+              <div className="text-xs text-emerald-700 flex flex-col gap-1 text-center">
+                <p><strong>Usuario:</strong> admin@demo.com</p>
+                <p><strong>Clave:</strong> cualquiera123</p>
+              </div>
+              <button 
                 type="button"
-                className="text-sm text-emerald-600 hover:underline"
-                onClick={() =>
-                  alert("Contacta al administrador para recuperar tu acceso.")
-                }
+                onClick={() => {
+                  setIdentifier("admin@demo.com");
+                  setPassword("cualquiera123");
+                }}
+                className="mt-3 w-full py-1.5 px-3 bg-white border border-emerald-200 text-emerald-700 text-xs rounded shadow-sm hover:bg-emerald-50 font-medium transition-colors"
               >
-                ¿Olvidaste tu contraseña?
+                Rellenar datos
               </button>
             </div>
           </div>
